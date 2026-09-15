@@ -203,7 +203,7 @@
     name: {
       el: document.getElementById('name'),
       wrap: document.getElementById('nameField'),
-      validate: v => v.trim().length > 0
+      validate: v => /^[A-Za-z]+(?: [A-Za-z]+)*$/.test(v.trim())
     },
     email: {
       el: document.getElementById('email'),
